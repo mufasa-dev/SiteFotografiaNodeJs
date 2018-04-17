@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizamfotos</title>    
+</head>
+
+<body>
+    
+<input type="button" name="" id="btnMais" class="btnMais" value=">">
+        <div>
+        <div id="fundoBranco"></div>
+    <div class="intro">
+        <div class="container">
+            <h1><%=dadosIndex[0].welcome%></h1>
+            <hr class="hrIndex">
+            <span><br><%=dadosIndex[0].welcomeDescri%>.<br><br></span>
+        </div>
+    </div>
+
+    <div id="pg3" class="divisao3">    
+        <div id="fundo" class="fundo">
+             <div class="divLogo">
+                <img src="img/System/logo.png">
+            </div> 
+        </div>  
+        <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
+
+          
+        <div class="descricaoDivisao1" id="descriLateral1">
+            <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral1%></h1>
+        </div>
+        <div class="descricaoDivisao1" id="descriLateral2">
+            <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral2%></h1>
+        </div>
+        <div class="descricaoDivisao1" id="descriLateral3">
+            <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral3%></h1>
+        </div>
+    </div>
+
+    <div class="header-sobre">
+        <div class="container hero">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <img src="img/System/Eliza.png" class="fotoSobre">
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-12 descriSobre fundoBorrado">
+                    <h1 style="font-family:Allura, cursive;font-size:47px;">Um pouco sobre mim</h1>
+                    <p><%=dadosIndex[0].descriSobreBreve%></p>
+                    <button class="btnDepoimento linkSobre" type="button" onclick="abrirSobre()">Mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="photo-gallery">
+
+            <div class="container">
+                    <h1 class="text-center">Portfólio</h1>
+                <div class="row">
+
+                
+                        <div class="item">
+                           <div class="row photos">
+                                <div class="col-3"><img id="fotoPort1" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort1%>" src="img/Portifolio/mini/1.jpg" onclick="mostrarImagem(this.title, this.src, 1)"></div>
+                                <div class="col-3"><img id="fotoPort2" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort2%>" src="img/Portifolio/mini/2.jpg" onclick="mostrarImagem(this.title, this.src, 2)"></div>
+                                <div class="col-3"><img id="fotoPort3" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort3%>" src="img/Portifolio/mini/3.jpg" onclick="mostrarImagem(this.title, this.src, 3)"></div>
+                                <div class="col-3"><img id="fotoPort4" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort4%>" src="img/Portifolio/mini/4.jpg" onclick="mostrarImagem(this.title, this.src, 4)"></div>
+                            </div>
+                       </div>
+                        <div class="item">
+                           <div class="row photos">
+                                <div class="col-3"><img id="fotoPort5" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort5%>" src="img/Portifolio/mini/5.jpg" onclick="mostrarImagem(this.title, this.src, 5)"></div>
+                                <div class="col-3"><img id="fotoPort6" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort6%>" src="img/Portifolio/mini/6.jpg" onclick="mostrarImagem(this.title, this.src, 6)"></div>
+                                <div class="col-3"><img id="fotoPort7" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort7%>" src="img/Portifolio/mini/7.jpg" onclick="mostrarImagem(this.title, this.src, 7)"></div>
+                                <div class="col-3"><img id="fotoPort8" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort8%>" src="img/Portifolio/mini/8.jpg" onclick="mostrarImagem(this.title, this.src, 8)"></div>
+                            </div>
+                       </div>
+                        <div class="item">
+                            <div class="row photos">
+                                <div class="col-3"><img id="fotoPort9" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort9%>" src="img/Portifolio/mini/9.jpg" onclick="mostrarImagem(this.title, this.src, 9)"></div>
+                                <div class="col-3"><img id="fotoPort10" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort10%>" src="img/Portifolio/mini/10.jpg" onclick="mostrarImagem(this.title, this.src, 10)"></div>
+                                <div class="col-3"><img id="fotoPort11" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort11%>" src="img/Portifolio/mini/11.jpg" onclick="mostrarImagem(this.title, this.src, 11)"></div>
+                                <div class="col-3"><img id="fotoPort12" class="img-fluid" title="<%=dadosIndex[0].nomeMiniPort12%>" src="img/Portifolio/mini/12.jpg" onclick="mostrarImagem(this.title, this.src, 12)"></div>
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+                <div class="divBtnDepoimento" style="padding-bottom: 30px">
+                    <button class="btnDepoimento linkAlbum" type="button" onclick="abrirAlbum()">Ver mais fotos</button>
+                </div>
+
+        </div>
+            </div>
+        </div>
+
+
+
+        <!-- Contato -->
+        <div class="foot">
+            <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-6">
+                <form action="/enviarMensagem" method="post">
+                    <div class="footForm">
+                    <img src="img/System/miniCam.jpg" class="imgFace">
+                    <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome"></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="E-mail"></div>
+                    <div class="form-group"><textarea class="form-control texArea" rows="14" name="mensagem" placeholder="Mensagem"></textarea></div>
+                    <div class="form-group"><button id="btnEnviarMensagem" class="btn btn-primary" type="submit" >Enviar</button></div>
+                </div>
+                </form>
+            </div>
+
+            <div class="col-12 col-lg-4 col-xl-4">
+                <h2 class="text-center">Me mande uma mensagem</h2>
+                <div class="messageLayout">
+                    <p>REDES SOCIAIS</p>
+                    <hr>
+                    <div class="messageSocial">
+                        <a href="<%=dadosIndex[0].facebook%>"><img src="svg/icoFacebook.svg" class="icoSvg"></i></a>
+                        <a href="<%=dadosIndex[0].instagram%>"><img src="svg/icoInstagram.svg" class="icoSvg"></i></a>
+                    </div>
+                </div>
+
+                <div class="messageLayout">
+                    <p>TELEFONE</p>
+                    <hr>
+                    <div class="messageSocial">
+                        <%=dadosIndex[0].telefone1%><br>
+                        <%=dadosIndex[0].telefone2%>
+                    </div>
+                </div>
+
+                <div class="messageLayout">
+                    <p>E-MAIL</p>
+                    <hr>
+                    <div class="messageSocial">
+                        <%=dadosIndex[0].emailContato%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<script>
+function abrirAlbum(){
+    if(document.getElementById("local").value != "album"){
+        $('#fundoBranco').fadeIn(1000);
+        $('#branco').val("true");
+        $.ajax({
+            url : '/Album?divisao=album',
+            method : 'get',
+            success: function(data){
+              $('#pg2').html(data);
+            }
+        })
+        $('#local').val("album");
+        setTimeout(function(){
+            $('.carregando').fadeIn(200);
+         },600);
+    }       
+};
+
+function abrirSobre(){
+    if(document.getElementById("local").value != "sobre"){
+        $('#fundoBranco').fadeIn(1000);
+        $('#branco').val("true");
+        $.ajax({
+            url : 'Sobre?divisao=sobre',
+            method : 'get',
+            success: function(data){
+              $('#pg2').html(data);
+            }
+        })
+        $('#local').val("sobre");   
+        setTimeout(function(){
+            $('.carregando').fadeIn(200);
+         },600);
+    }
+};
+</script>
+
+<script src="js/paginasLegais.js" type="text/javascript"></script>
+</body>
+
+</html>

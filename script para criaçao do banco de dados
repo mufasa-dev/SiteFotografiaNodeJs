@@ -1,0 +1,417 @@
+show bds // mostrar banco de dados
+
+use nomeDatabase - usar um banco de dados ou criar se n existir
+
+db.dropDatabase(); //Excluir banco de dados
+
+db.nomeDocumento.save({jason}) //insere novo documento
+
+db.nomeDocumento.drop(); //Excluir um documento
+
+db.createCollection("nome da collection"); //Criar coleçao
+
+db.getCollectionNames(); //pegar nomes das coleçoes
+
+db.nomeCollection.drop(); //Remover uma collection
+
+db.nomeCollection.save({jason}) //insere novo documento ou substitui
+
+db.nomeCollection.find().pretty(); //Exibe as informaçoes da collection
+
+db.nomeCollection.find({campo:($eq:"valor")})
+
+db.nomeCollection.update({condiçoes}, {campos que vao ser alterados}, {true}) //alterar valor
+
+db.nomeCollection.remove({criterio da exclusao}, {escolher true para todos ou false para so o primeiro}) //Remover registro
+
+Operadores matemaricos
+
+=  : $ew
+<  : $lt
+<= : $lte
+>  : $gt
+>= : $gte
+!= : $ne
+
+operadores logicos
+
+and : ,
+or  : $or[]
+
+
+
+use dbEliza
+
+db.index.save({
+	welcome : "Seja bem-vindo",
+	welcomeDescri : "bla-bla-bla-bla",
+	logotipo : "img/System/logo.png",
+	estilo : "preto",
+})
+
+db.mensagem.save({
+	nome : "teste",
+	eMail : "bruno.ribeiro96@hotmail.com.br",
+	mensagem: "Olá digu",
+	data : 2018,
+	status : false
+})
+
+
+
+55 11 942029003
+
+elizamfoto@gmail.com
+
+
+
+
+ db.index.update({id : 1}, {$set : {id : 1}})
+
+usuarios
+{
+        "_id" : ObjectId("5abfb331a041c3c1ab56260b"),
+        "id" : 1,
+        "nome" : "digu",
+        "senha" : "123"
+}
+{
+        "_id" : ObjectId("5acd8f504fbe0dad03fd7a69"),
+        "id" : 2,
+        "nome" : "falcoaerobis",
+        "senha" : "Deltor@14"
+}
+
+index
+{
+        "_id" : ObjectId("5ac2769621aa927aaf645888"),
+        "welcome" : "Seja bem-vindo",
+        "welcomeDescri" : "''Fotografar - Em grego ''photos'' significa ''luz''e ''graphein'' quer dizer ''escrever'', ''desenhar''. Um fotógrafo é, literalmente, alguém que desenha com luz, um homem que escreve e rescreve o mundo com luzes e sombras. '' Sebastião Salgado.",
+        "logotipo" : "img/System/logo.png",
+        "estilo" : "styles.min",
+        "id" : 1,
+        "descriSobre" : "Meu nome é Elizabeth Moraes e desde muito nova eu já tinha esse prazer em registrar por meio da fotografia cada detalhe, momento ou lugar que me chama-se a atenção.\r\nSempre procuro dar o melhor de mim quando se trata de encontrar o melhor jeito de se registrar uma imagem. Pois existem vários momentos importantes na nossa vida, alguns são longos, outros passam extremamente rápidos, alguns são momentos tristes, outros são felizes, mas todos eles são momentos únicos e alguns deles, os mais especiais para nós merecem ser guardados como recordação. Meu trabalho é buscar esses momentos e os registrar com clareza, para que o sentimento vivido naquele momento especial continue para sempre.",
+        "descriSobreBreve" : "Meu nome é Elizabeth Moraes e desde muito nova eu já tinha esse prazer em registrar por meio da fotografia cada detalhe, momento ou lugar que me chama-se a atenção.",
+        "emailContato" : "elizamfoto@gmail.com",
+        "facebook" : "https://www.facebook.com/ElizabethMFoto/?ref=settings",
+        "instagram" : "https://www.instagram.com/elizamfoto/?hl=pt-br",
+        "telefone1" : "55 11 942029003",
+        "telefone2" : "",
+        "idItem" : [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+        ],
+        "nomeMiniPort1" : "Observando a paisagem",
+        "nomeMiniPort10" : "Uma menina atenciosa ",
+        "nomeMiniPort11" : "Um sorriso adorável ",
+        "nomeMiniPort12" : "Olhando para a câmera",
+        "nomeMiniPort2" : "3 meses de muito amor chegando",
+        "nomeMiniPort3" : "Uma vista maravilhosa",
+        "nomeMiniPort4" : "Silhuetas",
+        "nomeMiniPort5" : "Coisa linda",
+        "nomeMiniPort6" : "Nasceu um príncipe ",
+        "nomeMiniPort7" : "Pés",
+        "nomeMiniPort8" : "Bocas",
+        "nomeMiniPort9" : "Uma menina linda",
+        "fotoLateral1" : "New born",
+        "fotoLateral2" : "Fotos de casais",
+        "fotoLateral3" : "Gravidez",
+        "carregando" : "svg/carregando3.svg"
+}
+
+tipoAlbum
+{
+        "_id" : ObjectId("5ac2fe7f6b1d1a152c47ba4e"),
+        "tipoAlbum" : "Fotos de casais"
+}
+{ "_id" : ObjectId("5ac2febb6b1d1a152c47ba4f"), "tipoAlbum" : "New born" }
+{
+        "_id" : ObjectId("5ac2fec36b1d1a152c47ba50"),
+        "tipoAlbum" : "Gravidez",
+        "idItem" : "5ac2fec36b1d1a152c47ba50"
+}
+
+album
+{
+        "_id" : ObjectId("5ac6af9b1c57f607fc92f19a"),
+        "nome" : "K&J 5 meses ",
+        "tipo" : "Gravidez",
+        "descriAlbum" : "Muito daora esse dia quando eu estava a tirar fotos",
+        "fotoCapa" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/431a920e-398b-4bd6-9668-60fb14ea9d1f/img_9830-2560x1706.jpg"
+}
+{
+        "_id" : ObjectId("5ac6b0737042db1390ac59f7"),
+        "nome" : "Arthur",
+        "tipo" : "New born",
+        "descriAlbum" : "nada mais simples meigo e doce quanto o sorriso de uma criança.",
+        "fotoCapa" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/a5dfaae3-c4c4-4afa-8f31-bcd484a3d885/18836960_226874927818123_617821730787687871_o-1280x853.jpg"
+}
+{
+        "_id" : ObjectId("5ac6b15ec1f04a1fa03c0b52"),
+        "nome" : "Lorena",
+        "tipo" : "New born",
+        "descriAlbum" : "Uma menina linda e encantadora que fica linda nas fotos.",
+        "fotoCapa" : "https://cdn.46graus.com/files/photos/e1764a72/830a94d9-ef7f-4ddb-8323-5227dc634d2e/img_8707-2560x1706.jpg",
+        "fotos" : {
+
+        }
+}
+
+Portfolio
+{
+        "_id" : ObjectId("5ac707ed4044fc113c500c59"),
+        "nomeFoto" : "De boas curtindo a vista",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/7a9d420d-39b1-44f4-b130-740a67b219a2/img_0012-2560x1706.jpg",
+        "idAlbum" : "5ac6af9b1c57f607fc92f19a"
+}
+{
+        "_id" : ObjectId("5ac7082b4044fc113c500c5a"),
+        "nomeFoto" : "Sentado com mozão",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/50b9cd1b-58df-4580-a0ba-8e8eaeb50a61/img_9925-2560x1706.jpg",
+        "idAlbum" : "5ac6af9b1c57f607fc92f19a"
+}
+{
+        "_id" : ObjectId("5ac709034044fc113c500c5b"),
+        "nomeFoto" : "Sozinha olhando a paisagem",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/821d2d20-5fe1-45f2-9830-adcc9d8aafae/img_9943-2560x1706.jpg",
+        "idAlbum" : "5ac6af9b1c57f607fc92f19a"
+}
+{
+        "_id" : ObjectId("5ac709204044fc113c500c5c"),
+        "nomeFoto" : "Se liga nessa carinha",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/925df1c3-f9a5-4d6d-b1f4-3dcff8c2cfd0/img_9919-2560x1706.jpg",
+        "idAlbum" : "5ac6af9b1c57f607fc92f19a"
+}
+{
+        "_id" : ObjectId("5ac7093b4044fc113c500c5d"),
+        "nomeFoto" : "Pose para a foto",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/402bdd68-f876-4149-9b31-b7383eb7de2f/img_9822-2560x1706.jpg",
+        "idAlbum" : "5ac6af9b1c57f607fc92f19a"
+}
+{
+        "_id" : ObjectId("5ac7098d4044fc113c500c5e"),
+        "nomeFoto" : "Seduzindo",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/2f74a083-aaba-42ff-b641-5cf7b54b9809/18891759_226874887818127_2335248890257810534_o-1151x852.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac709a94044fc113c500c5f"),
+        "nomeFoto" : "Seduzindo muito",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/38a6f1be-0d72-433d-9c1a-3fe00626a565/18880134_226874907818125_8266017443827787549_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70b4b0627ca0e64877601"),
+        "nomeFoto" : "Coisa fofa",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/3c6f2c16-f9b8-4bc8-a083-69ab821fe153/18839889_226874964484786_3776389274448440595_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70b6d0627ca0e64877602"),
+        "nomeFoto" : "Mais fofa ainda",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/9a2ef905-3f7e-40bc-bf12-605d8bf74f12/18839807_226874984484784_1579474946677400552_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70b8a0627ca0e64877603"),
+        "nomeFoto" : "Quer uma mãozinha?",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/30451046-8c07-4475-8a72-c7963ae14bf8/18836832_226875021151447_7624704332947253967_o-853x1280.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70ba90627ca0e64877604"),
+        "nomeFoto" : "Pés",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/9209614e-0579-49ef-9f14-e03c5c0e8e3e/18836767_226874874484795_3086112441735061814_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70bca0627ca0e64877605"),
+        "nomeFoto" : "Mini-pés",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/f756e6af-3040-44c9-9739-9cbe224ed021/18836632_226875011151448_5475857240108765594_o-853x1280.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70bf60627ca0e64877606"),
+        "nomeFoto" : "Boquinha ",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/a3abef94-e4f4-4dc1-b9ac-e24f04c7d7d0/18815392_226874864484796_3228150919791576464_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70c260627ca0e64877607"),
+        "nomeFoto" : "Em nome do rei",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/1bccb7db-1467-4085-b69f-a8ef0e4c1abf/18891652_226874997818116_8896876826585888015_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70c450627ca0e64877608"),
+        "nomeFoto" : "Nasce um príncipe ",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/a5dfaae3-c4c4-4afa-8f31-bcd484a3d885/18836960_226874927818123_617821730787687871_o-1280x853.jpg",
+        "idAlbum" : "5ac6b0737042db1390ac59f7"
+}
+{
+        "_id" : ObjectId("5ac70c930627ca0e64877609"),
+        "nomeFoto" : "Fazendo arte",
+        "url" : "https://cdn.46graus.com/files/photos/e1764a72/920d6dc9-876e-4026-b26d-0323df1566db/img_8824-2560x1858.jpg",
+        "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
+}
+{
+        "_id" : ObjectId("5ac70cad0627ca0e6487760a"),
+        "nomeFoto" : "Ta olhando o que?",
+        "url" : "https://cdn.46graus.com/files/photos/e1764a72/c49b1729-cabb-401f-8c3d-a439eb149233/img_8771-1707x2560.jpg",
+        "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
+}
+{
+        "_id" : ObjectId("5ac70cbf0627ca0e6487760b"),
+        "nomeFoto" : "A bailarina",
+        "url" : "https://cdn.46graus.com/files/photos/e1764a72/830a94d9-ef7f-4ddb-8323-5227dc634d2e/img_8707-2560x1706.jpg",
+        "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
+}
+{
+        "_id" : ObjectId("5ac70cd10627ca0e6487760c"),
+        "nomeFoto" : "Olha o que eu achei",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/3dc1d9b9-2bcd-4b3d-a436-fa69fa0a59bc/img_8586-2560x1781.jpg",
+        "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
+}
+{
+        "_id" : ObjectId("5ac70ce30627ca0e6487760d"),
+        "nomeFoto" : "O melhor sorriso",
+        "url" : "https://cdn-sites-images.46graus.com/files/photos/e1764a72/56a9c9dd-548b-40b0-bd91-255b358961fa/img_8556-recuperado-2560x1706.jpg",
+        "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
+}
+
+Mensagens
+{
+        "_id" : ObjectId("5abfa8a065ff892220948f81"),
+        "nome" : "alonso",
+        "email" : "geovani.antunes2015@gmail.com",
+        "mensagem" : "oi",
+        "data" : ISODate("2018-03-31T15:26:23.241Z"),
+        "status" : true
+}
+{
+        "_id" : ObjectId("5accbe18a6cda321cc0689d1"),
+        "nome" : "Bruno",
+        "email" : "bruno.ribeiro96@hotmail.com.br",
+        "mensagem" : "Olá",
+        "data" : ISODate("2018-04-10T13:37:26.994Z"),
+        "status" : false
+}
+{
+        "_id" : ObjectId("5acdc1dbb9dfcd1980cbe1e9"),
+        "nome" : "Teste",
+        "email" : "testanto@hotmail.com",
+        "mensagem" : "Testando 12",
+        "data" : ISODate("2018-04-11T08:05:46.636Z"),
+        "status" : false
+}
+{
+        "_id" : ObjectId("5acdc219b9dfcd1980cbe1ea"),
+        "nome" : "Teste",
+        "email" : "testanto@hotmail.com",
+        "mensagem" : "Testando 12",
+        "data" : ISODate("2018-04-11T08:06:48.627Z"),
+        "status" : false
+}
+{
+        "_id" : ObjectId("5acdc239b9dfcd1980cbe1eb"),
+        "nome" : "Teste",
+        "email" : "testanto@hotmail.com",
+        "mensagem" : "Testando 12",
+        "data" : ISODate("2018-04-11T08:07:20.537Z"),
+        "status" : false
+}
+{
+        "_id" : ObjectId("5acdc24db9dfcd1980cbe1ec"),
+        "nome" : "Teste último",
+        "email" : "geovani.antunes2015@gmail.com",
+        "mensagem" : "Teste",
+        "data" : ISODate("2018-04-11T08:07:40.309Z"),
+        "status" : false
+}
+{
+        "_id" : ObjectId("5ad272b3bc9ca215c090299c"),
+        "nome" : "Testando",
+        "email" : "bruno.ribeiro96@hotmail.com.br",
+        "mensagem" : "Testando de novo",
+        "data" : ISODate("2018-04-14T21:29:22.197Z"),
+        "status" : false
+}
+
+{
+        "_id" : ObjectId("5ac3bfff757d3f1eecc9148f"),
+        "nomeDepoi" : "Sem nome",
+        "assuntoDepoi" : "Sem assunto",
+        "fotoDepoi" : "img/System/semFoto.svg",
+        "mensagemDepoi" : "Sem mensagem",
+        "status" : true,
+        "data" : ISODate("2018-04-03T17:55:10.123Z")
+}
+{
+        "_id" : ObjectId("5ac3c1ab757d3f1eecc91490"),
+        "nomeDepoi" : "Bruno Ribeiro Antunes",
+        "assuntoDepoi" : "A melhor fotografa que conheço",
+        "fotoDepoi" : "https://scontent.fcpq1-1.fna.fbcdn.net/v/l/t1.0-9/13254245_732882820187459_6833019324107499143_n.jpg?_nc_cat=0&oh=50dd0b81a3eb80004c2b9f62c09bb321&oe=5B632E09",
+        "mensagemDepoi" : "Ela tem um olhar especial para fotografar momentos especiais que poucas pessoas tem, sou apaixonado pelo trabalho e a paixão dela por registrar momentos e detalhes desde antes dela comprar sua primeira câmera.",
+        "status" : true,
+        "data" : ISODate("2018-04-03T18:02:18.183Z")
+}
+{
+        "_id" : ObjectId("5ac65f38405d3415b01d00bb"),
+        "nomeDepoi" : "Garfield",
+        "assuntoDepoi" : "Gosto de lasanha",
+        "fotoDepoi" : "https://pbs.twimg.com/profile_images/451027744361422849/f5KCfGHa_400x400.jpeg",
+        "mensagemDepoi" : "Adoro lasanhas, lasanhas são legais",
+        "status" : true,
+        "data" : ISODate("2018-04-05T17:39:03.872Z")
+}
+{
+        "_id" : ObjectId("5ac65fbc405d3415b01d00bc"),
+        "nomeDepoi" : "Harry Potter",
+        "assuntoDepoi" : "Fotografias",
+        "fotoDepoi" : "https://vignette.wikia.nocookie.net/harrypotter/images/0/00/Harry_James_Potter34.jpg/revision/latest/scale-to-width-down/340?cb=20150826224904",
+        "mensagemDepoi" : "Com licença, você gostaria de saber como tirar fotografias que se mexem?",
+        "status" : true,
+        "data" : ISODate("2018-04-05T17:41:15.685Z")
+}
+{
+        "_id" : ObjectId("5ac65ff0405d3415b01d00bd"),
+        "nomeDepoi" : "Professor",
+        "assuntoDepoi" : "Assalto",
+        "fotoDepoi" : "https://pbs.twimg.com/profile_images/964943296882757632/yhDq1_K3_400x400.jpg",
+        "mensagemDepoi" : "Vamos roubar a casa da moeda do Brasil",
+        "status" : true,
+        "data" : ISODate("2018-04-05T17:42:07.138Z")
+}
+{
+        "_id" : ObjectId("5ac660c0405d3415b01d00be"),
+        "nomeDepoi" : "Doctor",
+        "assuntoDepoi" : "Vamos viajar?",
+        "fotoDepoi" : "https://fc06.deviantart.net/fs70/f/2014/201/8/5/doctorwho_30_by_espiritulechuza-d7rjwo4.gif",
+        "mensagemDepoi" : "De todo tempo e espaço, de tudo que aconteceu e que ainda irá acontecer, por onde gostaria de começar?\r\nP.S. Não pisque",
+        "status" : true,
+        "data" : ISODate("2018-04-05T17:45:35.298Z")
+}
+
+perguntas
+{
+        "_id" : ObjectId("5ac312b89ff3620fc08f0407"),
+        "pergunta" : "Quanto você cobra?",
+        "resposta" : "O valor de cada ensaio varia muito do tipo dele. e onde ele será realizado. Não existe um valor fixo para meu trabalho, mas você pode entrar em contato comigo para que possamos conversar sobre o orçamento.",
+        "idItem" : "5ac312b89ff3620fc08f0407"
+}
+{
+        "_id" : ObjectId("5ac3147127218d147c5ac89d"),
+        "pergunta" : "Até onde você vai para realizar seus ensaios?",
+        "resposta" : "Estou morando atualmente na Vila Natal em Mogi das Cruzes e no momento só estou aceitando trabalhos próximos da minha cidade.",
+        "idItem" : "5ac3147127218d147c5ac89d"
+}

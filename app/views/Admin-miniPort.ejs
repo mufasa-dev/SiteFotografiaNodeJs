@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizamfotos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+    <script src="js/carousel.js" type="text/javascript"></script>
+    
+
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+
+</head>
+
+<body>
+<div class="config">
+
+
+</div>
+<div class="container">
+  <h2 style="text-align: center">Mini-portfólio</h2>
+          <br>                                                                                      
+          <div class="table-responsive">          
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Descição</th>
+                <th>Alterar foto</th>
+              </tr>
+            </thead>
+            <tbody>             
+              <tr>                
+                <td><img src="img/Portifolio/mini/1.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort1" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort1%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload1">
+                    <input type="hidden" name="arquivo" value="1">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload1').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="1">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/2.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort2" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort2%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload2">
+                    <input type="hidden" name="arquivo" value="2">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload2').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="2">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/3.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort3" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort3%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload3">
+                    <input type="hidden" name="arquivo" value="3">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload3').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="3">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/4.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort4" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort4%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload4">
+                    <input type="hidden" name="arquivo" value="4">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload4').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="4">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/5.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort5" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort5%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload5">
+                    <input type="hidden" name="arquivo" value="5">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload5').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="5">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/6.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort6" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort6%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload6">
+                    <input type="hidden" name="arquivo" value="6">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload6').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="6">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/7.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort7" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort7%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload7">
+                    <input type="hidden" name="arquivo" value="7">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload7').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="7">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/8.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort8" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort8%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload8">
+                    <input type="hidden" name="arquivo" value="8">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload8').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="8">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/9.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort9" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort9%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload9">
+                    <input type="hidden" name="arquivo" value="9">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload9').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="9">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/10.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort10" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort10%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload10">
+                    <input type="hidden" name="arquivo" value="10">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload10').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="10">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/11.jpg" style="width: 100px"></td>
+                <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort11" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort11%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload11">
+                    <input type="hidden" name="arquivo" value="11">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload11').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="11">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+
+              <tr>                
+                <td><img src="img/Portifolio/mini/12.jpg" style="width: 100px"></td>
+               <td>
+                  <form action="salvarMiniPort" method="post">
+                      <input type="text" name="nomeMiniPort12" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].nomeMiniPort12%>">
+                      <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+
+                  </form>
+                </td>
+                <input type="hidden" name="idItem" value="">
+                <td>
+                  <form action="fileuploadMiniPort" method="post" enctype="multipart/form-data" id="fileupload12">
+                    <input type="hidden" name="arquivo" value="12">
+                     <label class="btn btn-success btn-block" onchange="document.getElementById('fileupload12').submit()">
+                          Alterar foto <input type="file" name="filetouploadLogo" hidden>
+                      </label>
+                  </form>
+
+                  <form action="fileuploadMiniPortDefault" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="arquivo" value="12">
+                    <input type="submit" value="Foto padrão" class="btn btn-danger btn-block">
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+  
+</div>
+
+<script src="js/arbum.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizamfotos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+    <script src="js/carousel.js" type="text/javascript"></script>
+    
+
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+
+
+</head>
+
+<body>
+<div class="config">
+        <h1>Olá Digu</h1>
+        <hr class="hrIndex">
+        <br>
+        <div class="container">
+            <p>Coloque aqui as perguntas mais frequentes feitas pelos seus clientes para evitar futuras mensagens e dúvidas que eles possam ter. Coloque as informações básicas do tipo: Quanto você cobra por um ensaio de casais, gravides ou new born. Coloque até onde pretende ir para tirar fotos. Se você tem ajuda de alguém nos ensaios. Essas coisas.</p>
+        </div>
+        <hr>
+
+        <div class="container">
+            <form action="inserirPergunta" method="post">
+                <h2>Cadastrar nova pergunta</h2>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            Pergunta
+                        </td>
+                        <td>
+                            <input type="text" name="pergunta" placeholder="Pergunta frequente" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; padding-top: 8px">
+                            Resposta
+                        </td>
+                        <td>
+                            <textarea class="form-control textArea" rows="14" name="resposta" placeholder="Resposta frequente"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Salvar" class="btn btn-primary btn-block">
+            </form>
+        </div>
+        <hr>
+
+        <div class="container">
+         <h2>Lista de perguntas</h2>   
+
+            <% for(i = 0; i < perguntas.length; i++){%>
+            <form action="atualizaPerguna" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            Pergunta
+                        </td>
+                        <td>
+                            <input type="text" name="pergunta" placeholder="Pergunta frequente" class="form-control" value="<%=perguntas[i].pergunta%>">
+                        </td>
+                        <td style="vertical-align: top; text-align: left;">
+                            <input type="hidden" name="idItem" value="<%=perguntas[i]._id%>">
+                            <input type="submit" value="Alterar" class="btn btn-success">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; padding-top: 8px">
+                            Resposta
+                        </td>
+                        <td>
+                            <textarea class="form-control textArea" rows="14" name="resposta" placeholder="Resposta frequente"><%=perguntas[i].resposta%></textarea>
+                        </td>
+                    </form>
+                    <form action="excluirPergunta" method="post">
+                        <td style="vertical-align: top; text-align: left;">
+                            <input type="hidden" name="idItem" value="<%=perguntas[i]._id%>">
+                            <input type="submit" value="Excluir" class="btn btn-danger">
+                        </td>
+                    </form>
+                    </tr>
+                </table>
+            <% } %>
+        </div>
+        <hr>
+        <br><br>
+</body>
+
+</html>

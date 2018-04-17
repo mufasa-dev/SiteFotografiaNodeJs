@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="25 -25 100 100" style="enable-background:new 25 -25 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#222222;}
+	.st1{opacity:0.9;fill:#222222;enable-background:new    ;}
+	.st2{opacity:0.8;fill:#222222;enable-background:new    ;}
+	.st3{opacity:0.7;fill:#222222;enable-background:new    ;}
+	.st4{opacity:0.6;fill:#222222;enable-background:new    ;}
+	.st5{opacity:0.1;fill:#222222;enable-background:new    ;}
+	.st6{opacity:0.5;fill:#222222;enable-background:new    ;}
+	.st7{opacity:0.4;fill:#222222;enable-background:new    ;}
+	.st8{opacity:0.3;fill:#222222;enable-background:new    ;}
+	.st9{opacity:0.2;fill:#222222;enable-background:new    ;}
+	.st10{font-family:'MyriadPro-Regular';}
+	.st11{font-size:12px;}
+
+	#Camada_1_1_{
+	    transform-origin: 74% 18%;
+		-webkit-animation: spin 2s linear 0s infinite;
+	}
+
+	@keyframes spin {
+	    from {transform:rotate(0deg);}
+	    to {transform:rotate(360deg);}
+	}
+</style>
+<g id="Camada_1_1_">
+	<ellipse class="st0" cx="76.2" cy="-9.3" rx="5.2" ry="5"/>
+	<ellipse class="st1" cx="60.2" cy="-4.3" rx="5.2" ry="5"/>
+	<ellipse class="st2" cx="50.2" cy="7.7" rx="5.2" ry="5"/>
+	<ellipse class="st3" cx="48.2" cy="23.7" rx="5.2" ry="5"/>
+	<ellipse class="st4" cx="58.2" cy="38.7" rx="5.2" ry="5"/>
+	<ellipse class="st5" cx="94.2" cy="-4.3" rx="5.2" ry="5"/>
+	<ellipse class="st6" cx="75.2" cy="43.7" rx="5.2" ry="5"/>
+	<ellipse class="st7" cx="92.2" cy="37.7" rx="5.2" ry="5"/>
+	<ellipse class="st8" cx="101.2" cy="24.7" rx="5.2" ry="5"/>
+	<ellipse class="st9" cx="102.2" cy="10.7" rx="5.2" ry="5"/>
+</g>
+<g id="texto">
+	<text transform="matrix(1 0 0 1 46.2519 66.5453)" class="st0 st10 st11">Carregando</text>
+</g>
+</svg>

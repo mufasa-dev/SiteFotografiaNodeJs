@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizamfotos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+    <script src="js/carousel.js" type="text/javascript"></script>
+    
+
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+
+
+</head>
+
+<body>
+<div class="config">
+ <div class="container">
+    <h1>Olá Digu</h1>
+    <hr class="hrIndex">
+    <br>
+    <p>Nesta parte você poderá vizualizar as mensagens enviadas para você pelo footer da página. Quando um cliente clicar no botão enviar mensagem, a mensagem ira vir para cá. Onde você poderá visuzalizar o que foi enviado, juntamente com o e-mail e o nome da pessoa que enviou. E depois poderá simplesmente exclui-la.</p>
+</div>
+<hr>
+
+  <div class="container">
+  <h2>Lista de Mensagens</h2>
+  <br>                                                                                      
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th style="text-align: left">Nome usuário</th>
+        <th style="text-align: left">Data de envio</th>
+        <th>Vizualizar</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(let i = 0; i < mensagens.length; i++){ %>
+      <tr>
+        <form action="vizualizaMensagem" method="post">
+          <% if(mensagens[i].status == false){ %>
+            <td style="width: 60px"><img src="img/System/message.svg" style="width: 100%"></td>
+          <% }else{ %>
+            <td style="width: 60px"><img src="img/System/message.svg" style="width: 100%; filter: grayscale(100%);"></td>
+          <% } %>
+            <td style="text-align: left"><p><%=mensagens[i].nome%></p></td>
+            <td style="text-align: left"><p><%=mensagens[i].data.toLocaleDateString()%></p></td>
+            <input type="hidden" name="idItem" value="<%=mensagens[i]._id%>">
+            <td><input type="submit" name="" value="Vizualizar" class="btn btn-success"></td>
+        </form>
+        <form action="excluirMensagem" method="post">
+            <td>
+                <input type="hidden" name="idItem" value="<%=mensagens[i]._id%>">
+                <input type="submit" name="" value="Excluir" class="btn btn-danger">
+            </td>
+        </form>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
