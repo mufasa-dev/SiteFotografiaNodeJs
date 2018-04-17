@@ -2,8 +2,8 @@
 
 var MongoModule = require('mongodb').MongoClient;
  
-const url = 'mongo_dbeliza:27017';
-const dbName = 'dbEliza';
+const url = 'naboo.mongodb.umbler.com:42686';
+const dbName = 'dbeliza';
  
 function dbConnection(){
  this._MongoClient = undefined;
@@ -13,7 +13,6 @@ function dbConnection(){
 dbConnection.prototype.connectToMongo = function(callback){
  
   MongoModule.connect(url, function(err, client) {
-  console.log("Server Conectado Com Sucesso!");
   var MongoClient = client;
   var MongoDB = client.db(dbName);
   
