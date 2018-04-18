@@ -149,36 +149,38 @@
 function abrirAlbum(){
     if(document.getElementById("local").value != "album"){
         $('#fundoBranco').fadeIn(1000);
+        $('.carregando').fadeIn(1000);
         $('#branco').val("true");
-        $.ajax({
-            url : '/Album?divisao=album',
-            method : 'get',
-            success: function(data){
-              $('#pg2').html(data);
-            }
-        })
+        
         $('#local').val("album");
         setTimeout(function(){
-            $('.carregando').fadeIn(200);
-         },600);
+            $.ajax({
+                url : '/Album?divisao=album',
+                method : 'get',
+                success: function(data){
+                  $('#pg2').html(data);
+                }
+            })
+         },1000);
     }       
 };
 
 function abrirSobre(){
     if(document.getElementById("local").value != "sobre"){
         $('#fundoBranco').fadeIn(1000);
+        $('.carregando').fadeIn(1000);
         $('#branco').val("true");
-        $.ajax({
-            url : 'Sobre?divisao=sobre',
-            method : 'get',
-            success: function(data){
-              $('#pg2').html(data);
-            }
-        })
+        
         $('#local').val("sobre");   
         setTimeout(function(){
-            $('.carregando').fadeIn(200);
-         },600);
+            $.ajax({
+                url : 'Sobre?divisao=sobre',
+                method : 'get',
+                success: function(data){
+                  $('#pg2').html(data);
+                }
+            })
+         },1000);
     }
 };
 </script>

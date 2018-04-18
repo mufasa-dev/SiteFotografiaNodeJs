@@ -156,18 +156,19 @@
 function abrirDepoi(){
     if(document.getElementById("local").value != "depoi"){
         $('#fundoBranco').fadeIn(1000);
+        $('.carregando').fadeIn(1000);
         $('#branco').val("true");
-        $.ajax({
-            url : '/Depoimentos?divisao=depoi',
-            method : 'get',
-            success: function(data){
-              $('#pg2').html(data);
-            }
-        })
+       
         $('#local').val("depoi");
         setTimeout(function(){
-            $('.carregando').fadeIn(200);
-         },600);
+            $.ajax({
+                url : '/Depoimentos?divisao=depoi',
+                method : 'get',
+                success: function(data){
+                  $('#pg2').html(data);
+                }
+            })
+         },1000);
     }       
 };
 </script>
