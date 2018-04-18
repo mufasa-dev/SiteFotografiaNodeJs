@@ -49,36 +49,38 @@ $('#btnMenos').on('click', function () {
 $(".linkSobre").on('click', function(){
 	if(document.getElementById("local").value != "sobre"){
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : 'Sobre?divisao=sobre',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		
 		$('#local').val("sobre");	
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+			$.ajax({
+				url : 'Sobre?divisao=sobre',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 	}
 });
 
 $(".linkInicio").on('click', function(){
 	if(document.getElementById("local").value != "inicio"){
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/Inicio?divisao=inicio',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})	
+			
 		$('#local').val("inicio");	
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+			$.ajax({
+				url : '/Inicio?divisao=inicio',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 		document.getElementById("caroucel").value = "index";
 	}
 });
@@ -86,54 +88,57 @@ $(".linkInicio").on('click', function(){
 $(".linkDepoi").on('click', function(){
 	if(document.getElementById("local").value != "depoi"){
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/Depoimentos?divisao=depoi',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		
 		$('#local').val("depoi");
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+			$.ajax({
+				url : '/Depoimentos?divisao=depoi',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 	}		
 });
 
 $(".linkContato").on('click', function(){
 	if(document.getElementById("local").value != "contato"){
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/Contato?divisao=contato',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		
 		$('#local').val("contato");
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+			$.ajax({
+				url : '/Contato?divisao=contato',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 	}		
 });
 
 $(".linkPerguntas").on('click', function(){
 	if(document.getElementById("local").value != "perguntas"){
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/Perguntas?divisao=perguntas',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		
 		$('#local').val("perguntas");
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+			$.ajax({
+				url : '/Perguntas?divisao=perguntas',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 	}		
 });
 
@@ -141,17 +146,18 @@ $(".linkAlbum").on('click', function(){
 	if(document.getElementById("local").value != "album"){
 		$('#fundoBranco').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/Album?divisao=album',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		$('.carregando').fadeIn(1000);
+		
 		$('#local').val("album");
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+		   $.ajax({
+				url : '/Album?divisao=album',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			}) 
+		 },1000);
 	}		
 });
 
@@ -159,17 +165,18 @@ function abrirTipoAlbum(id){
   if(document.getElementById("local").value != id){
 		$('#fundoBranco').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/' + id + '&divisao=sobre',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		$('.carregando').fadeIn(1000);
+		
 		$('#local').val(id);
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
-		 },600);
+		    $.ajax({
+				url : '/' + id + '&divisao=sobre',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
+		 },1000);
 	}	
 }
 
@@ -195,17 +202,18 @@ function abrirPort(id){
 	    $('#btnMais').prop("disabled",false);
 
 		$('#fundoBranco').fadeIn(1000);
+		$('.carregando').fadeIn(1000);
 		$('#branco').val("true");
-		$.ajax({
-			url : '/' + id + '&divisao=sobre',
-			method : 'get',
-			success: function(data){
-			  $('#pg2').html(data);
-			}
-		})
+		
 		$('#local').val(id);
 		setTimeout(function(){
-		    $('.carregando').fadeIn(200);
+		    $.ajax({
+				url : '/' + id + '&divisao=sobre',
+				method : 'get',
+				success: function(data){
+				  $('#pg2').html(data);
+				}
+			})
 		 },600);
 		document.getElementById("caroucel").value = "port";
 	}	
