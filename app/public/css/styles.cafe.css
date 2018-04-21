@@ -227,6 +227,14 @@ h2{
     outline: 0;
 }
 
+.fundoPreto{
+	background-color: rgb(114, 76, 40);
+	color: white;
+	padding-top: 130px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+
 .foot{
 	background-color: rgb(114, 76, 40);
 	color: white;

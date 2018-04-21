@@ -224,9 +224,9 @@ function abrirPort(id){
 //Tela do lado
 var id = 1;
 var imgs = new Array();
-imgs[0] = "../img/Portifolio/1.jpg";
-imgs[1] = "../img/Portifolio/2.jpg";
-imgs[2] = "../img/Portifolio/3.jpg";
+imgs[0] = document.getElementById('imgLateral1').src;
+imgs[1] = document.getElementById('imgLateral2').src;
+imgs[2] = document.getElementById('imgLateral3').src;
 function troca(){
   $("#descriLateral" + (id+1)).fadeOut(500);
   if (id<imgs.length-1){

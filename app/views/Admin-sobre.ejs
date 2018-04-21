@@ -52,7 +52,7 @@
                         Breve descrição
                     </td>
                     <td>
-                        <textarea class="form-control textArea" rows="14" name="descriSobreBreve" placeholder="Breve descrição"><%=dadosIndex[0].descriSobre%>
+                        <textarea class="form-control textArea" rows="14" name="descriSobreBreve" placeholder="Breve descrição"><%=dadosIndex[0].descriSobreBreve%>
                         </textarea>
                     </td>
                 </tr>
@@ -61,135 +61,94 @@
                         Descrição
                     </td>
                     <td>
-                        <textarea class="form-control textArea" rows="14" name="descriSobre" placeholder="Fale sobre você"><%=dadosIndex[0].descriSobreBreve%>
+                        <textarea class="form-control textArea" rows="14" name="descriSobre" placeholder="Fale sobre você"><%=dadosIndex[0].descriSobre%>
                         </textarea>
                     </td>
                 </tr>
             </table>
         </div>
-        <hr>
-        <div class="container">
-            <input type="submit" value="Salvar" class="btn btn-primary btn-block">
-        </div>
-        </form>
-        <hr>
-        <h2>Foto breve descrição frente</h2>
-        <div class="container">
-            <p>Foto que aparece na tela inicial.</p>
-        </div>
-        <br>
+        
 
-        <img src="img/System/Eliza.png" width="300px"><br>
-
-        <form action="fileuploadSobre" method="post" enctype="multipart/form-data" id="fileuploadSobre">
-            <input type="hidden" value="Eliza" name="arquivo">
-            <input type="hidden" value=".png" name="extencao">
-            <label class="btn btn-primary" onchange="document.getElementById('fileuploadSobre').submit()">
-                Carregar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <td style="text-align: left">
-        <form action="fileuploadSobre_default" method="post" enctype="multipart/form-data">
-            <input type="hidden" value="Eliza" name="arquivo">
-            <input type="hidden" value=".png" name="extencao">
-            <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
+            <hr>
+            <div class="container">
+            <h2>Foto breve descrição frente</h2>
+            <div class="container">
+                <p>Foto que aparece na tela inicial. Coloque uma imagem grande e com fundo transparente. </p>
+            </div>
             <br>
-        </form><br>
 
-        <div class="header-sobre" style="background-attachment: inherit;"">
+            <img src="<%=dadosIndex[0].imgBreveDescri%>" width="300px" id="breveDescri"><br>
+
+            <input type="text" name="imgBreveDescri" class="form-control" value="<%=dadosIndex[0].imgBreveDescri%>" id="imgBreveDescri" placeholder="Url da imagem" onkeyup="document.getElementById('breveDescri').src=(this.value)">
+            
+            <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgBreveDescri').value= 'img/System/Eliza.png';document.getElementById('breveDescri').src=('img/System/Eliza.png')">
+            <br>
+        </div>
+        <div class="header-sobre" style=" background-image: url('<%=dadosIndex[0].imgFundoBreveDescri%>');background-attachment: inherit;" id="headersobre">
             <br>
             <div class="container">
                 <div class="depoimento">
                     <h2>Definir fundo da breve descrição</h2>
                     <p style="color:white">Coloque aqui um fundo que aparecera na tela inicial na parte da breve descrição.
                     O tamanho ideal seria algo proporcional a 1300px por 500px</p>
-                     <form action="fileuploadSobre" method="post" enctype="multipart/form-data" id="fileuploadSobre3">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <input type="hidden" value="imgFundoSobre" name="arquivo">
-                        <label class="btn btn-primary" onchange="document.getElementById('fileuploadSobre3').submit()">
-                            Carregar foto <input type="file" name="filetouploadLogo" hidden>
-                        </label>
-                    </form>
-                    <td style="text-align: left">
-                    <form action="fileuploadSobre_default" method="post" enctype="multipart/form-data">
-                        <input type="hidden" value="imgFundoSobre" name="arquivo">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-                    </form><br>
+                     <input type="text" name="imgFundoBreveDescri" class="form-control" value="<%=dadosIndex[0].imgFundoBreveDescri%>" id="imgFundoBreveDescri" placeholder="Url da imagem" onkeyup="document.getElementById('headersobre').style.backgroundImage='url('+this.value+')'">
+            
+                    <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgFundoBreveDescri').value= '../img/System/imgFundoSobre.jpg';document.getElementById('headersobre').style.backgroundImage='url(../img/System/imgFundoSobre.jpg)'">
+            <br>
                 </div>
             </div>
             <br>
         </div>
-
-        <h2>Foto descrição frente</h2>
         <div class="container">
-            <p>Foto que aparece na tela "Sobre mim".</p>
+        <h2>Foto descrição frente</h2>
+
+        <p>Foto que aparece na tela "Sobre mim".</p>
+
+        <br>
+
+        <img src="<%=dadosIndex[0].imgSobre%>" width="300px" id="imageSobre"><br>
+
+        <input type="text" name="imgSobre" class="form-control" value="<%=dadosIndex[0].imgSobre%>" id="imgSobre" placeholder="Url da imagem" onkeyup="document.getElementById('imageSobre').src=(this.value)">
+            
+        <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgSobre').value= 'img/System/ElizaSobre.png';document.getElementById('imageSobre').src=('img/System/ElizaSobre.png')">
+        <br>
         </div>
-        <br>
-
-        <img src="img/System/ElizaSobre.png" width="300px"><br>
-
-        <form action="fileuploadSobre" method="post" enctype="multipart/form-data" id="fileuploadSobre2">
-            <input type="hidden" value="ElizaSobre" name="arquivo">
-            <input type="hidden" value=".png" name="extencao">
-            <label class="btn btn-primary" onchange="document.getElementById('fileuploadSobre2').submit()">
-                Carregar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <td style="text-align: left">
-        <form action="fileuploadSobre_default" method="post" enctype="multipart/form-data">
-            <input type="hidden" value="ElizaSobre" name="arquivo">
-            <input type="hidden" value=".png" name="extencao">
-            <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-        </form><br>
-        <br>
-        
-        <div class="opinioes" style="background-attachment: inherit;"">
+        <div class="opinioes" id="opinioes" style=" background-image: url('<%=dadosIndex[0].imgFundoDepoi%>');background-attachment: inherit;" id="headersobre">
             <div class="container">
                 <div class="depoimento">
                     <h2>Definir fundo dos depoimentos</h2>
                     <p style="color:white">Coloque aqui um fundo que aparecera na tela "Sobre mim" na parte dos depoimentos.
                     O tamanho ideal seria algo proporcional a 1300px por 500px</p>
-                     <form action="fileuploadSobre" method="post" enctype="multipart/form-data" id="fileuploadSobre3">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <input type="hidden" value="imgDepoimento" name="arquivo">
-                        <label class="btn btn-primary" onchange="document.getElementById('fileuploadSobre3').submit()">
-                            Carregar foto <input type="file" name="filetouploadLogo" hidden>
-                        </label>
-                    </form>
-                    <td style="text-align: left">
-                    <form action="fileuploadSobre_default" method="post" enctype="multipart/form-data">
-                        <input type="hidden" value="imgDepoimento" name="arquivo">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-                    </form><br>
+                     <input type="text" name="imgFundoDepoi" class="form-control" value="<%=dadosIndex[0].imgFundoDepoi%>" id="imgFundoDepoi" placeholder="Url da imagem" onkeyup="document.getElementById('opinioes').style.backgroundImage='url('+this.value+')'">
+            
+                    <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgFundoDepoi').value= '../img/System/imgDepoimento.jpg';document.getElementById('opinioes').style.backgroundImage='url(../img/System/imgDepoimento.jpg)'">
+
+
+                    <br>
                 </div>
             </div>
         </div>
 
-         <div class="opinioes3" style="background-attachment: inherit;"">
+         <div class="opinioes3" id="opinioes3" style=" background-image: url('<%=dadosIndex[0].imgEnviaDepoi%>');background-attachment: inherit;" id="headersobre">
             <div class="container">
                 <div class="depoimento" style="text-align: center">
                     <h2>Definir fundo da tela enviar depoimento</h2>
                     <p style="color:white">Coloque aqui um fundo que aparecera na tela "Depoimentos". Uma imagem um pouco maior do que a de cima.</p>
-                    <form action="fileuploadSobre" method="post" enctype="multipart/form-data" id="fileuploadSobre4">
-                        <input type="hidden" value="imgDepoimento2" name="arquivo">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <label class="btn btn-primary" onchange="document.getElementById('fileuploadSobre4').submit()">
-                            Carregar foto <input type="file" name="filetouploadLogo" hidden>
-                        </label>
-                    </form>
-                    <td style="text-align: left">
-                    <form action="fileuploadSobre_default" method="post" enctype="multipart/form-data">
-                        <input type="hidden" value="imgDepoimento2" name="arquivo">
-                        <input type="hidden" value=".jpg" name="extencao">
-                        <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-                    </form><br>
+                    <input type="text" name="imgEnviaDepoi" class="form-control" value="<%=dadosIndex[0].imgEnviaDepoi%>" id="imgEnviaDepoi" placeholder="Url da imagem" onkeyup="document.getElementById('opinioes3').style.backgroundImage='url('+this.value+')'">
+            
+                    <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgEnviaDepoi').value= '../img/System/imgDepoimento2.jpg';document.getElementById('opinioes3').style.backgroundImage='url(../img/System/imgDepoimento2.jpg)'">
+
+                    <br>
                 </div>
             </div>
         </div>
-
-
+        <hr>
+        <div class="container">
+            <input type="submit" value="Salvar" class="btn btn-primary btn-block">
+            <br>
+        </div>
+    </div>
+</form>
 </body>
 
 </html>

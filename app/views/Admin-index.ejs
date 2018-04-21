@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="css/styles.min.css">
     
-
+    <link rel="icon" href="demo_icon.gif" type="img/ico" sizes="16x16">
 
 </head>
 
@@ -41,32 +41,42 @@
             <p>Aqui estão as informações da sua tela inicial. Poderá definir nesta tela o seu logotipo, caso enjooe do seu atual. E a mensagem de boas vindas ao site. Além de é claro, o mais importante, definir as configurações de cores do mesmo (Eu particularmente prefiro o preto). Ao alterar alguma coisa não se esqueça de ir lá no final e clicar no botão salvar. Se não der nenhum erro e por que salvou.</p>
         </div>
         <hr>
-        <h2>Logotipo</h2>
-        <p>Defina aqui o logotipo do site. O padrão que usei foi 317px por 100px.</p>
-        <br>
-<!--  -->
-        <img src="img/System/logo.png" width="300px" style="margin-bottom: 30px;"><br>
+        <form action="salvaDadosIndex" method="post">
+        <div class="container">
+            <h2>Logotipo</h2>
+            <p>Defina aqui o logotipo do site. O padrão que usei foi 317px por 100px.</p>
+            <br>
+            <!--  -->
+            <img src="img/System/logo.png" width="300px" style="margin-bottom: 30px;" id="logo"><br>
 
-        <form action="fileuploadlogo" method="post" enctype="multipart/form-data" id="fileuploadlogo">
-            <label class="btn btn-primary" onchange="document.getElementById('fileuploadlogo').submit()">
-                Carregar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <td style="text-align: left">
-        <form action="fileuploadlogo_default" method="post" enctype="multipart/form-data">
-            <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-        </form>
-
+            <input type="text" name="imgLogo" class="form-control" value="<%=dadosIndex[0].imgLogo%>" id="imgLogo" placeholder="Url da imagem" onkeyup="document.getElementById('logo').src=(this.value)">
+            
+            <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgLogo').value= 'img/System/logo.png';document.getElementById('logo').src=('img/System/logo.png')">
+            
+        </div>
         <hr>
     
-    <form action="salvaDadosIndex" method="post">
+   
+        <div class="container">
+            <h2>Desativar site</h2>
+            <p>Se quiser tirar o seu site do ar por qualquer razão basta alterar o campo abaixo.</p>
+            <select name="bloqueio" class="form-control">
+                <option value="sim">Ativado</option>
+                <% if(dadosIndex[0].bloqueio == "sim"){ %>
+                    <option value="no">Desativado</option>
+                <% }else{ %>                
+                    <option value="no" selected>Desativado</option>
+                <% } %>
+            </select>
+        </div>
+        <hr>
         <h2>Estilo de cores</h2>
         <div class="container">
             <select class="form-control" id="sel1" name="estilo">
                 <% if(dadosIndex[0].estilo == "styles.min"){ %>
-                    <option value="styles.min" selected>Preto Batman</option>
+                    <option value="styles.min" selected>Preto e branco</option>
                 <% }else{ %>
-                    <option value="styles.min">Preto Batman</option>
+                    <option value="styles.min">Preto e branco</option>
                 <% } %>
                 <% if(dadosIndex[0].estilo == "styles.cafe"){ %>
                     <option value="styles.cafe" selected>Café</option>

@@ -9,7 +9,7 @@ function dbConnection(){
 
 dbConnection.prototype.connectToMongo = function(callback){
  
-	MongoModule.connect("mongodb://falcoaerobis:deltora14@naboo.mongodb.umbler.com:42686/dbeliza", function(err, client){
+	MongoModule.connect("mongodb://falcoaerobis:deltora14@ds014388.mlab.com:14388/dbeliza", function(err, client){
 		var MongoClient = client;
 		var MongoDB = client.db('dbeliza');
 		  

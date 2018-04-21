@@ -22,12 +22,16 @@ indexDAO.prototype.iniciaIndex = function(res){
 		const collection = db.collection('index');
 		const collection2 = db.collection('tipoAlbum');
 		collection.find().toArray(function(err, result){
-			dadosGeral = result;	
-			collection2.find().toArray(function(err, result){
+			dadosGeral = result;
+			if(dadosGeral[0].bloqueio == "no"){
+				res.render('bloqueio', {dadosIndex : dadosGeral});
+				client.close();	
+			}else	
+			{collection2.find().toArray(function(err, result){
 				tiposAlbum = result;
 				res.render('index', {dadosIndex : dadosGeral, tipos : tiposAlbum});
 				client.close();	
-			});	
+			});}	
 		});
 	 });
 }

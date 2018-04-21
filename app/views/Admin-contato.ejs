@@ -42,28 +42,26 @@
         <p>Aqui você poderá alterar todas as informações da parte de contato. Coloque aqui seu e-mail, telefone, facebook, etc. para que os clientes possam te achar, juntamente com mais uma imagem para deixar essa parte do site com a sua cara.</p>
     </div>
     <hr>
+    <form action="salvarDadosContato" method="post">
+
     <div class="container">
         <h2>Imagem de contato pequena</h2>
         <br>
         <p>A imagem abaixo é a que aparece no footer da página junto com as opções de mandar mensagem e seus dados de contato. O tamanho ideal para se ultilizar é 150px por 150px, mas qualquer outra foto que colocar ai fica do tamanho certo.</p>
 
         <br>
-        <img src="img/System/miniCam.jpg" class="imgFaceConfig"><br>
 
-        <form action="fileuploadContato" method="post" enctype="multipart/form-data" id="fileuploadlogo">
-            <label class="btn btn-primary" onchange="document.getElementById('fileuploadlogo').submit()">
-                Carregar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <td style="text-align: left">
-        <form action="fileuploadContatoDefault" method="post" enctype="multipart/form-data">
-            <input type="submit" class="btn btn-primary" name="voltaFotoLogo" value="Foto original">
-        </form>
+        <img src="img/System/miniCam.jpg" class="imgFaceConfig" id="miniCam"><br>
+
+        <input type="text" name="imgMiniCam" class="form-control" value="<%=dadosIndex[0].imgMiniCam%>" id="imgMiniCam" placeholder="Url da imagem" onkeyup="document.getElementById('miniCam').src=(this.value)">
+        
+        <input type="button" class="btn btn-primary btn-block" value="Foto original" onclick="document.getElementById('imgMiniCam').value= 'img/System/miniCam.jpg';document.getElementById('miniCam').src=('img/System/miniCam.jpg')">
+        
+
     </div>
     <hr>
     <div class="container">
-    <form action="salvarDadosContato" method="post">
-        <div class="container">
+            <div class="container">
             <h2>Informações básicas de contato</h2>
             <br>
             <table>

@@ -32,7 +32,6 @@ module.exports.fazerLogin = function(application, req, res){
 	req.assert('senha', 'Favor informar a senha').notEmpty();
 
 	var erros = req.validationErrors();
-	console.log(erros);
 
 	if(erros){
 		res.render("Admin-login", {validacao : erros, dadosForm : dadosForm});

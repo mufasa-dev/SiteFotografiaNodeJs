@@ -16,9 +16,9 @@
         <div id="fundoBranco"></div>
 
     <div id="pg3" class="divisao3">    
-        <div id="fundo" class="fundo">
+        <div id="fundo" class="fundo" style="background-image: url('<%=dadosIndex[0].fotoLateral2%>');">
              <div class="divLogo">
-                <img src="img/System/logo.png">
+                <img src="<%=dadosIndex[0].imgLogo%>">
             </div> 
         </div>  
         <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
@@ -39,7 +39,7 @@
         <div class="container hero">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-5 imgFotoGrande">
-                    <img src="img/System/ElizaSobre.png" class="fotoSobreMim">
+                    <img src="<%=dadosIndex[0].imgSobre%>" class="fotoSobreMim">
                 </div>
                 <div class="col-md-5 col-lg-5 descriSobre" id="descriSobre">
                     <h1 style="font-family:Allura, cursive;font-size:47px;">Um pouco sobre mim</h1><hr>
@@ -58,7 +58,7 @@
         </div>
     </div>
         
-    <div class="opinioes">
+    <div class="opinioes" style="background-image: url('<%=dadosIndex[0].imgFundoDepoi%>');">
         <div class="container">
             <h1>O que as pessoas dizem...</h1>
             <hr class="hrIndex">
@@ -109,7 +109,7 @@
                 <div class="col-12 col-lg-8 col-xl-6">
                 <form action="/enviarMensagem" method="post">
                     <div class="footForm">
-                    <img src="img/System/miniCam.jpg" class="imgFace">
+                    <img src="<%=dadosIndex[0].imgMiniCam%>" class="imgFace">
                     <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome"></div>
                     <div class="form-group"><input class="form-control" type="email" name="email" placeholder="E-mail"></div>
                     <div class="form-group"><textarea class="form-control texArea" rows="14" name="mensagem" placeholder="Mensagem"></textarea></div>

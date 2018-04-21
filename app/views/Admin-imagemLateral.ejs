@@ -37,13 +37,13 @@
 <hr>
   <div class="container">
   <h2>Fotos laterais</h2>   
-
+  <p>Essas são as três imagens que aparecem na lateral do seu site. Coloque imagens grandes que caibam an tela toda mas nem tanto para não deixar o site pesado e lento para carrega-las.</p>
 
   <div class="table-responsive">          
   <table class="table">   
     <tr>
       <td rowspan="3" style="width: 200px">
-        <img src="../img/Portifolio/1.jpg" width="200px" id="imgAddFoto">
+        <img src="../img/Portifolio/1.jpg" width="200px" id="imgAddFoto1">
       </td>
       <td>
         <h4>Foto 1</h4>
@@ -56,23 +56,18 @@
             <input type="text" name="fotoLateral1" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].fotoLateral1%>">
             <input type="submit" class="btn btn-primary" value="Salvar">
           </div>
-        </form>
+        
       </td>
     </tr>
     <tr> 
       <td>
-        <form action="fileuploadLateral" method="post" enctype="multipart/form-data" id="fileuploadLateral">
-          <input type="hidden" name="arquivo" value="1">
-           <label class="btn btn-primary" onchange="document.getElementById('fileuploadLateral').submit()">
-                Alterar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <form action="fileuploadLateralDefault" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="arquivo" value="1">
-          <input type="submit" value="Foto padrão" class="btn btn-danger">
-        </form>
+      <div class="input-group">
+        <input type="text" name="imgLateral1" class="form-control" value="<%=dadosIndex[0].imgLateral1%>" id="imgLateral1" placeholder="Url da imagem" onkeyup="document.getElementById('imgAddFoto1').src=(this.value)">
+        
+        <input type="button" class="btn btn-danger" value="Foto original" onclick="document.getElementById('imgLateral1').value= '../img/Portifolio/1.jpg';document.getElementById('imgAddFoto1').src=('../img/Portifolio/1.jpg')">
+      </div>
       </td>
-
+    </form>
     </tr>
    </table>
   </div>
@@ -81,7 +76,7 @@
   <table class="table">   
     <tr>
       <td rowspan="3" style="width: 200px">
-        <img src="../img/Portifolio/2.jpg" width="200px" id="imgAddFoto">
+        <img src="../img/Portifolio/2.jpg" width="200px" id="imgAddFoto2">
       </td>
       <td>
         <h4>Foto 2</h4>
@@ -94,22 +89,18 @@
             <input type="text" name="fotoLateral2" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].fotoLateral2%>">
             <input type="submit" class="btn btn-primary" value="Salvar">
           </div>
-        </form>
+        
       </td>
     </tr>
     <tr> 
       <td>
-        <form action="fileuploadLateral" method="post" enctype="multipart/form-data" id="fileuploadLateral2">
-          <input type="hidden" name="arquivo" value="2">
-           <label class="btn btn-primary" onchange="document.getElementById('fileuploadLateral2').submit()">
-                Alterar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <form action="fileuploadLateralDefault" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="arquivo" value="2">
-          <input type="submit" value="Foto padrão" class="btn btn-danger">
-        </form>
+      <div class="input-group">
+        <input type="text" name="imgLateral2" class="form-control" value="<%=dadosIndex[0].imgLateral2%>" id="imgLateral2" placeholder="Url da imagem" onkeyup="document.getElementById('imgAddFoto2').src=(this.value)">
+        
+        <input type="button" class="btn btn-danger" value="Foto original" onclick="document.getElementById('imgLateral2').value= '../img/Portifolio/2.jpg';document.getElementById('imgAddFoto2').src=('../img/Portifolio/2.jpg')">
+      </div>
       </td>
+      </form>
     </tr>
    </table>
   </div>
@@ -118,7 +109,7 @@
   <table class="table">   
     <tr>
       <td rowspan="3" style="width: 200px">
-        <img src="../img/Portifolio/3.jpg" width="200px" id="imgAddFoto" >
+        <img src="../img/Portifolio/3.jpg" width="200px" id="imgAddFoto3" >
       </td>
       <td>
         <h4>Foto 3</h4>
@@ -131,22 +122,17 @@
             <input type="text" name="fotoLateral3" placeholder="Nome da foto" class="form-control" value="<%=dadosIndex[0].fotoLateral3%>">
             <input type="submit" class="btn btn-primary" value="Salvar">
           </div>
-        </form>
       </td>
     </tr>
     <tr> 
       <td>
-        <form action="fileuploadLateral" method="post" enctype="multipart/form-data" id="fileuploadLateral3">
-          <input type="hidden" name="arquivo" value="3">
-           <label class="btn btn-primary" onchange="document.getElementById('fileuploadLateral3').submit()">
-                Alterar foto <input type="file" name="filetouploadLogo" hidden>
-            </label>
-        </form>
-        <form action="fileuploadLateralDefault" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="arquivo" value="3">
-          <input type="submit" value="Foto padrão" class="btn btn-danger">
-        </form>
+      <div class="input-group">
+        <input type="text" name="imgLateral3" class="form-control" value="<%=dadosIndex[0].imgLateral3%>" id="imgLateral3" placeholder="Url da imagem" onkeyup="document.getElementById('imgAddFoto3').src=(this.value)">
+        
+        <input type="button" class="btn btn-danger" value="Foto original" onclick="document.getElementById('imgLateral3').value= '../img/Portifolio/3.jpg';document.getElementById('imgAddFoto3').src=('../img/Portifolio/3.jpg')">
+      </div>
       </td>
+      </form>
     </tr>
    </table>
   </div>

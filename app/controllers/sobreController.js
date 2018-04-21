@@ -26,6 +26,7 @@ module.exports.depoimentos = function(application, req, res){
 
 module.exports.adicionaDepoimento = function(application, req, res){
 	var dados = req.body;
+	console.log(req.body)
 	dados["status"] = false;
 	dados["data"] = new Date();
 	if(dados.fotoDepoi == ""){

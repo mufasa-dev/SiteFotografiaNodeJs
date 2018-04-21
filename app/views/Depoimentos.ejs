@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elizamfotos</title>
 
+    <script>
+        function enviaDepoi(){
+            document.getElementById('formDepoi').submit()
+        }
+    </script>
+
 </head>
 
 <body>
@@ -15,10 +21,10 @@
         <div>
         
 
-    <div id="pg3" class="divisao3">    
+    <div id="pg3" class="divisao3" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">    
         <div id="fundo" class="fundo">
              <div class="divLogo">
-                <img src="img/System/logo.png">
+                <img src="<%=dadosIndex[0].imgLogo%>">
             </div> 
         </div>  
         <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
@@ -77,15 +83,15 @@
         </div>-->
     </div></div>
 
-    <div class="opinioes3">
+    <div class="opinioes3" style="background-image: url('<%=dadosIndex[0].imgEnviaDepoi%>');">
         <div class="container">            
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col-8 depoi"><div class="depoimento">
                     <h2 style="text-align: center">Já conhece meu trabalho? <br> Deixe seu depoimento</h2>
+                    <form action="/adicionaDepoimento" method="post" id="formDepoi">
 
                     <table class="table">
-                    <form action="adicionaDepoimento" method="post" id="formDepoi">
                         <tr>
                             <td colspan="2" class="sumir768">Nome</td>
                             <td>                                
@@ -113,7 +119,7 @@
                         </tr>
                         <tr>
                             <td colspan="3">                                
-                                <input type="submit" value="Enviar" class="btn btn-primary btn-block" onclick="document.getElementById('formDepoi').submit()">
+                                <input type="submit" value="Enviar" class="btn btn-primary btn-block" >
                             </td>
                         </tr>
                     </form>
@@ -136,7 +142,7 @@
                 <div class="col-12 col-lg-8 col-xl-6">
                 <form action="/enviarMensagem" method="post">
                     <div class="footForm">
-                    <img src="img/System/miniCam.jpg" class="imgFace">
+                    <img src="<%=dadosIndex[0].imgMiniCam%>" class="imgFace">
                     <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome"></div>
                     <div class="form-group"><input class="form-control" type="email" name="email" placeholder="E-mail"></div>
                     <div class="form-group"><textarea class="form-control texArea" rows="14" name="mensagem" placeholder="Mensagem"></textarea></div>

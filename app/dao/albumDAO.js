@@ -143,11 +143,9 @@ albumDAO.prototype.dropAlbumId = function(res, album){
 //Altera os dados da foto do portfolio
 albumDAO.prototype.alteraFotoPort = function(res, dados){
 	var mongoConnected = this._connection.connectToMongo(function(client, db){
-		console.log(dados)
 		const collection = db.collection('portfolio');
 		var ObjectId = require('mongodb').ObjectId; 
 		var o_id = new ObjectId(dados.idItem);
-		console.log(dados)
 		collection.update({_id : o_id}, {$set : {nomeFoto : dados.nomeFoto, url : dados.url}})
 		res.redirect('adminAlbum');
 		client.close();		

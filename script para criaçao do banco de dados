@@ -85,6 +85,7 @@ usuarios
 index
 {
         "_id" : ObjectId("5ac2769621aa927aaf645888"),
+        "bloqueio" : "no",
         "welcome" : "Seja bem-vindo",
         "welcomeDescri" : "''Fotografar - Em grego ''photos'' significa ''luz''e ''graphein'' quer dizer ''escrever'', ''desenhar''. Um fotógrafo é, literalmente, alguém que desenha com luz, um homem que escreve e rescreve o mundo com luzes e sombras. '' Sebastião Salgado.",
         "logotipo" : "img/System/logo.png",
@@ -289,7 +290,7 @@ Portfolio
         "idAlbum" : "5ac6b15ec1f04a1fa03c0b52"
 }
 
-Mensagens
+mensagem
 {
         "_id" : ObjectId("5abfa8a065ff892220948f81"),
         "nome" : "alonso",
@@ -347,6 +348,7 @@ Mensagens
         "status" : false
 }
 
+depoimento
 {
         "_id" : ObjectId("5ac3bfff757d3f1eecc9148f"),
         "nomeDepoi" : "Sem nome",

@@ -11,10 +11,10 @@
 <body>
 <div id="fundoBranco"></div>
 
-<div id="pg3" class="divisao3">    
+<div id="pg3" class="divisao3" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">    
     <div id="fundo" class="fundo">
          <div class="divLogo">
-            <img src="img/System/logo.png">
+            <img src="<%=dadosIndex[0].imgLogo%>">
         </div> 
     </div>  
     <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
@@ -62,7 +62,7 @@
                 <div class="col-12 col-lg-8 col-xl-6">
                 <form action="/enviarMensagem" method="post">
                     <div class="footForm">
-                    <img src="img/System/miniCam.jpg" class="imgFace">
+                    <img src="<%=dadosIndex[0].imgMiniCam%>" class="imgFace">
                     <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome"></div>
                     <div class="form-group"><input class="form-control" type="email" name="email" placeholder="E-mail"></div>
                     <div class="form-group"><textarea class="form-control texArea" rows="14" name="mensagem" placeholder="Mensagem"></textarea></div>
