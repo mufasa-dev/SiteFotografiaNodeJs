@@ -11,8 +11,8 @@ $('#btnMais').on('click', function () {
     $('#fundo').addClass('fundo3');
     $('#posicaoTela').val("divisao");
     document.getElementById("posicaoTela").value = "divisao_full";
-    $('.depoi').removeClass('col-6');
-    $('.depoi').addClass('col-12');
+    $('.depoi').removeClass('col-md-6');
+    $('.depoi').addClass('col-md-12');
     
     $('#descriSobre').removeClass('col-md-5 col-lg-5');
     $('#descriSobre').addClass('col-12');
@@ -34,8 +34,8 @@ $('#btnMais').on('click', function () {
     document.getElementById("posicaoTela").value = "divisao";
     document.getElementById("carregando").style.left = "calc(70% - 125px)";
 
-    $('.depoi').removeClass('col-6');
-    $('.depoi').addClass('col-12');
+    $('.depoi').removeClass('col-md-6');
+    $('.depoi').addClass('col-md-12');
     
     $('#descriSobre').removeClass('col-md-5 col-lg-5');
     $('#descriSobre').addClass('col-12');
@@ -97,3 +97,4 @@ function leavArtigo(id){
   $("#" +id + "ver").css('opacity', '0');
   $("#" +id + " .imgArtigo").css('filter', 'grayscale(0%)');
 }
+

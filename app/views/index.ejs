@@ -44,10 +44,11 @@
 </div>
 
 <div id="pg1" class="divisao" >    
-    <div id="fundo" class="fundo" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">
-         <div class="divLogo">
+    <div class="divLogo">
             <img src="<%=dadosIndex[0].imgLogo%>">
         </div> 
+    <div id="fundo" class="fundo" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">
+         
     </div>  
     <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
 
@@ -103,12 +104,20 @@
                         <li class="nav-item btnDoNav" role="presentation"><a class="nav-link active" >
                             <input type="button" class="btnNav linkInicio" name="" value="Inicio">
                         </a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" >
+                        <!-- Sobre mim -->
+                        <li class="dropdown" role="presentation"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
                             <input type="button" class="btnNav linkSobre" name="" value="Sobre mim">
-                        </a></li>
+                        </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item linkSobre" role="presentation">Geral</a>
+                                <a class="dropdown-item linkDepoi" role="presentation">Depoimentos</a>
+                                <a class="dropdown-item linkPerguntas" role="presentation">Perguntas frequentes</a>
+                            </div>
+                        </li>
+                        <!-- Portfolios -->
                         <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="Portfolio">
                             <input type="button" class="btnNav" name="" value="Portfólio">
-                        </a>
+                        </a>                            
                             <div class="dropdown-menu" role="menu">
                                 <a class="dropdown-item linkAlbum" role="presentation">Todos</a>
                                 <% for(let i = 0; i < tipos.length; i++){ %>
@@ -116,9 +125,9 @@
                                 <% } %>
                             </div>
                         </li>
-                        <li class="nav-item" role="presentation"><a class="nav-link">
+                        <!--<li class="nav-item" role="presentation"><a class="nav-link">
                             <input type="button" class="btnNav linkPerguntas" name="" value="Perguntas frequentes">
-                        </a></li>
+                        </a></li>-->
                         <li class="nav-item" role="presentation"><a class="nav-link">
                             <input type="button" class="btnNav linkContato" name="" value="Contato">
                         </a></li>
@@ -141,7 +150,7 @@
     </div>
 
     <div id="pg3" class="divisao3" >    
-        <div id="fundo" class="fundo" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">
+        <div id="fundo2" class="fundo" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">
              <div class="divLogo">
                 <img src="<%=dadosIndex[0].imgLogo%>">
             </div> 
@@ -149,13 +158,13 @@
         <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
 
           
-        <div class="descricaoDivisao1" id="descriLateral1">
+        <div class="descricaoDivisao1" id="descriLateral21">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral1%></h1>
         </div>
-        <div class="descricaoDivisao1" id="descriLateral2">
+        <div class="descricaoDivisao1" id="descriLateral22">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral2%></h1>
         </div>
-        <div class="descricaoDivisao1" id="descriLateral3">
+        <div class="descricaoDivisao1" id="descriLateral23">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral3%></h1>
         </div>
     </div>
@@ -163,10 +172,10 @@
     <div class="header-sobre" style=" background-image: url('<%=dadosIndex[0].imgFundoBreveDescri%>');">
         <div class="container hero">
             <div class="row">
-                <div class="col-12 col-lg-6 col-xl-5">
+                <div class="col-md-12 col-lg-6 col-xl-5">
                     <img src="<%=dadosIndex[0].imgBreveDescri%>" class="fotoSobre">
                 </div>
-                <div class="col-md-5 col-lg-5 col-sm-12 descriSobre fundoBorrado">
+                <div class="col-xs-5 col-lg-5 col-sm-12 descriSobre fundoBorrado">
                     <h1 style="font-family:Allura, cursive;font-size:47px;">Um pouco sobre mim</h1>
                     <p><%=dadosIndex[0].descriSobreBreve%></p>
                     <button class="btnDepoimento linkSobre" type="button">Mais</button><br><br>

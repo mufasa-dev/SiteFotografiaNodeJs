@@ -2,12 +2,18 @@ function mensagemDAO(connection){
 	this._connection = connection;
 }
 
-mensagemDAO.prototype.enviarMensagem = function(mensagem){
+mensagemDAO.prototype.enviarMensagem = function(res, mensagem){
 
 	var mongoConnected = this._connection.connectToMongo(function(client, db){
  
 		const collection = db.collection('mensagem');
 		collection.insert(mensagem);
+		const collection2 = db.collection('index');
+		collection2.find().toArray(function(err, result){
+			res.render('confirmaMensagem', {dadosIndex : result});
+			client.close();
+		});
+		
 		client.close();
 	 
 	 });

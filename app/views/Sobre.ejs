@@ -16,7 +16,7 @@
         <div id="fundoBranco"></div>
 
     <div id="pg3" class="divisao3">    
-        <div id="fundo" class="fundo" style="background-image: url('<%=dadosIndex[0].fotoLateral2%>');">
+        <div id="fundo2" class="fundo" style="background-image: url('<%=dadosIndex[0].imgLateral2%>');">
              <div class="divLogo">
                 <img src="<%=dadosIndex[0].imgLogo%>">
             </div> 
@@ -24,13 +24,13 @@
         <input type="button" name="" id="btnMenos" class="btnMenos" value="<">  
 
           
-        <div class="descricaoDivisao1" id="descriLateral1">
+        <div class="descricaoDivisao1" id="descriLateral21">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral1%></h1>
         </div>
-        <div class="descricaoDivisao1" id="descriLateral2">
+        <div class="descricaoDivisao1" id="descriLateral22">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral2%></h1>
         </div>
-        <div class="descricaoDivisao1" id="descriLateral3">
+        <div class="descricaoDivisao1" id="descriLateral23">
             <h1 class="animated fadeInLeft"><%=dadosIndex[0].fotoLateral3%></h1>
         </div>
     </div>
@@ -65,7 +65,7 @@
             <div class="row">
                 
                 <% for(let i = 0; i < depoimentos.length; i++){ %>
-                <div class="col-6 depoi"><div class="depoimento">
+                <div class="col-md-6 col-ls-12 depoi"><div class="depoimento">
                     <table>
                         <tr>
                             <td></td>
@@ -94,8 +94,8 @@
         </div>
         <script type="text/javascript">
             if ($('#posicaoTela').val() == 'divisao'){
-                $('.depoi').removeClass('col-6');
-                $('.depoi').addClass('col-12');
+                $('.depoi').removeClass('col-md-6');
+                $('.depoi').addClass('col-md-12');
             }
         </script>
     </div></div>

@@ -11,8 +11,8 @@ $('#btnMenos').on('click', function () {
 
     $('#descriSobre').removeClass('col-12');
     $('#descriSobre').addClass('col-md-5 col-lg-5');
-    $('.depoi').removeClass('col-12');
-    $('.depoi').addClass('col-6');
+    $('.depoi').removeClass('col-md-12');
+    $('.depoi').addClass('col-md-6');
 
     $('#posicaoTela').val("divisao_default");
     document.getElementById("posicaoTela").value = "divisao_default";
@@ -31,8 +31,8 @@ $('#btnMenos').on('click', function () {
     $('#fundo').addClass('fundo');
     $('#posicaoTela').val("divisao");
     document.getElementById("posicaoTela").value = "divisao";
-    $('.depoi').removeClass('col-6');
-    $('.depoi').addClass('col-12');
+    $('.depoi').removeClass('col-md-6');
+    $('.depoi').addClass('col-md-12');
       
     $('#descriSobre').removeClass('col-md-5 col-lg-5');
     $('#descriSobre').addClass('col-12');
@@ -235,10 +235,13 @@ function troca(){
     id=0
   }
   $("#fundo").fadeOut(500);
+  $("#fundo2").fadeOut(500);
 
   setTimeout(function(){
     $('#fundo').css('background-image', 'url('+imgs[id]+')');
     $('#fundo').fadeIn(600);
+    $('#fundo2').css('background-image', 'url('+imgs[id]+')');
+    $('#fundo2').fadeIn(600);
     $("#descriLateral" + (id+1)).fadeIn(500);
   },600);
 }
@@ -294,3 +297,4 @@ $('#setaAnt').mouseup(function(){
 $('.xzinho').on('click', function(){
   $('.carroceulGigante').css("display", "none");
 })
+

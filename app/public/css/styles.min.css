@@ -34,7 +34,7 @@
 }
 
 body{
-	overflow-x: hidden; 
+	
 }
 
 h1{
@@ -51,6 +51,10 @@ h2{
     font-weight: 500;
     line-height: 1.2;
     font-size:42px;
+}
+
+.fundoEscuro{
+	background-color: #222222;
 }
 
 .menuCima{
@@ -130,6 +134,7 @@ h2{
 	padding-top: 20px;
 	color: white;
 	position: absolute;
+	z-index: 52;
 }
 
 .descricaoDivisao1{
@@ -383,7 +388,7 @@ h2{
 }
 
 .fundo{
-	background-image: url("../img/Portifolio/2.jpg");
+	background-color: #222222;
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -404,7 +409,7 @@ h2{
 }
 
 .fundo2{
-	background-image: url("../img/Portifolio/2.jpg");
+	background-color: #222222;
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -425,7 +430,7 @@ h2{
 }
 
 .fundo3{
-	background-image: url("../img/Portifolio/2.jpg");
+	background-color: #222222;
 	background-position: center center;
     background-size: cover;
     width: 100%;
@@ -730,7 +735,7 @@ h2{
     padding-top: 25px;
     padding-bottom: 25px;
     width: auto !important;
-    height: 100%;
+    height:100%;
 }
 
 
@@ -931,7 +936,7 @@ h2{
 	position: fixed;
 	top:calc(50% - 125px);
 	left:calc(70% - 125px);
-	z-index: 501;
+	z-index: 5001;
 }
 
 .carregando img{
@@ -993,13 +998,17 @@ h2{
 	}
 
 	#pg3{
-		display: block
+		display: block;
+		margin-top: 50px;
 	}
 
 	.divLogo img{
 		width: 320px;
 	}
 
+	.intro{
+		padding-bottom: 0px;
+	}
 
 	 .divisao3 {
 		position: static;
@@ -1009,7 +1018,6 @@ h2{
 	    width: 100%;
 	    height: 400px;
 	    box-sizing: border-box;
-	    background-image: url(../img/Portifolio/2.jpg);
 	    background-size: 200% 100%;
 	    padding-top: 0px;
 	    z-index: 52;
@@ -1037,6 +1045,18 @@ h2{
 
 	#btnMais, #btnMenos{
 		display: none;
+	}
+
+	.divLogo{
+		padding-left: 0px;
+	}
+
+	.divLogo img{
+		width: 240px;
+	}
+
+	.carregando{
+		left: calc(50% - 125px);
 	}
 }
 

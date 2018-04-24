@@ -80,6 +80,11 @@ sobreDAO.prototype.inserirDepoimento = function(res, depoimento){
 	var mongoConnected = this._connection.connectToMongo(function(client, db){
 		const collection = db.collection('depoimento');
 		collection.insert(depoimento);
+		const collection2 = db.collection('index');
+		collection2.find().toArray(function(err, result){
+			res.render('confirmaDepoi', {dadosIndex : result});
+			client.close();
+		});
 		client.close();
 	 });
 }

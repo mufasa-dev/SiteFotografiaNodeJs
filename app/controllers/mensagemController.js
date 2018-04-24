@@ -20,9 +20,7 @@ module.exports.enviarMensagem = function(application, req, res){
 	var connection = new application.config.dbConnection();
 
 	var mdao = new application.app.dao.mensagemDAO(connection);
-	mdao.enviarMensagem(dadosForm);
-
-	res.render('confirmaMensagem');
+	mdao.enviarMensagem(res, dadosForm);
 }
 
 module.exports.vizualizaMensagem = function(application, req, res){

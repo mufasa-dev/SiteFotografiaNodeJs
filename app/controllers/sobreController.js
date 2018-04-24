@@ -36,7 +36,6 @@ module.exports.adicionaDepoimento = function(application, req, res){
 	var connection = new application.config.dbConnection();
 	var sdao = new application.app.dao.sobreDAO(connection);
 	sdao.inserirDepoimento(res, dados);
-	res.render('confirmaDepoi');
 }
 
 module.exports.adminSobre = function(application, req, res){
