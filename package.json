@@ -19,7 +19,7 @@
     "express-validator": "^2.20.8",
     "formidable": "^1.2.1",
     "mongodb": "^3.0.5",
-    "mongoose": "^5.0.14",
+    "mongoose": "^5.7.5",
     "npm-git-install": "^0.3.0"
   },
   "devDependencies": {
